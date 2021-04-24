@@ -1,4 +1,4 @@
-![Logo icon](contents/logo/logo.svg "Software-name logo")
+![Logo icon](contents/logo/logo.png "Software-name logo")
 # Decency
 **GRUB 2 theme**
 
