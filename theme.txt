@@ -1,0 +1,132 @@
+# Theme "decency"
+# This theme is based on the Descent theme
+# first modifications made by N-z0 in december 2015 and last edit on march 2021
+#
+# It works properly with a resolution of 1920x1080
+# See file readme how to use with GRUB
+# See file copyright for copyrights 
+#
+
+
+
+
+
+# Global settings:
+# ----------------
+desktop-color: "black"
+
+# desactive le text de titre car celuici a une configuration tres limit
+title-text: "" #GNU GRUB menu version: %s
+title-color: "darkgreen"
+title-font: "Unifont Bold 30"
+
+#for messages such grub is unable to automatically boot an entry
+message-font: "Unifont Regular 20"
+message-color: "darkgreen"
+message-bg-color: "black"
+terminal-box: "menu_*.png"
+
+# cette option nest pas dans le manuel officiel de grub2
+terminal-font: "Unifont Regular 20"
+
+
+
+
+# Components:
+#------------
+
++ label {
+	top = 3%
+	left = 3%
+	width = 94%
+	height = 30
+
+	font = "Unifont Bold 30"
+	color = "darkgreen"
+	text = " GNU GRUB menu "
+	align = "center"
+}
+
+
+
++ hbox {
+	top = 20%-72
+	left = 3%
+	width = 94%
+	height = 30
+
+	+ label { font = "Unifont Regular 20" color = "darkgreen" text = "Use "}
+	+ label { font = "Unifont Bold 20" color = "forestgreen" text = "↑" }
+	+ label { font = "Unifont Regular 20" color = "darkgreen" text = " and "}
+	+ label { font = "Unifont Bold 20" color = "forestgreen" text = "↓"}
+	+ label { font = "Unifont Regular 20" color = "darkgreen" text = " to select and press "}
+	+ label { font = "Unifont Bold 20" color = "forestgreen" text = "⏎"}
+	+ label { font = "Unifont Regular 20" color = "darkgreen" text = " to boot or press "}
+	+ label { font = "Unifont Bold 20" color = "forestgreen" text = "E"}
+	+ label { font = "Unifont Regular 20" color = "darkgreen" text = " to edit the commands."}
+}
++ hbox {
+	top = 20%-42
+	left = 3%
+	width = 94%
+	height = 30
+	
+	+ label { font = "Unifont Regular 20" color = "darkgreen" text = "Press "}
+	+ label { font = "Unifont Bold 20" color = "forestgreen" text = "C"}
+	+ label { font = "Unifont Regular 20" color = "darkgreen" text = " for open Shell-terminal."}
+}
+
+
+
+# The Boot_menu shows every found Operatingsystem
++ boot_menu {
+	top = 20%
+	left = 3%
+	width = 94%
+	height = 60% #82%+45
+
+	item_font = "Unifont Bold 20"
+	selected_item_font = "Unifont Bold 20"
+	item_color = "darkgreen"
+	selected_item_color = forestgreen
+	item_height = 20
+	item_spacing = 3
+	item_padding = 3
+#	icon_width = 0
+#	icon_height = 0
+#	item_icon_space = -10
+	menu_pixmap_style = "menu_*.png"
+
+# The scrollbar 
+	scrollbar = true
+	scrollbar_width = 7
+#	scrollbar_frame = "scrollframe_*.png"
+	scrollbar_thumb = "scroll_thumb_*.png"
+}
+
+
+
+# Following label would be better in a hbox-container, but if we do that, the timeout do not work 
++ label {
+	top = 94%-42
+	left = 3%
+	width = 94%
+	height = 3%
+	align = "center"
+	id = "__timeout__"
+	color = "darkgreen"
+	font = "Unifont Regular 20"
+	text = "Automatic boot in %d seconds."
+}
+
+# The progressbar at the bottom 
++ progress_bar {
+	top = 94%
+	left = 3%
+	width = 94%
+	height = 3%
+	id = "__timeout__"
+	fg_color = "black"
+	bg_color = "darkgreen"
+	show_text = false
+}
