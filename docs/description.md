@@ -1,70 +1,36 @@
 ![Logo icon](contents/logo/logo.svg "Software-name logo")
-# Software-name
-**fancy slogan / ex: jQuery — the new JavaScript Wave**
+# Decency
+**GRUB 2 theme**
 
 
-## 🚩 Intro
-A short summary presentation of what this software is.  
-*(if the name is an acronym or abbreviation, give full meaning)*  
+## 🚩 Description
+As the name suggests this theme for bootloader is simple, sober and efficient 
 
 
-## 📋 Glossary
- - Computer  
-	Device working on binaries information.
- - Fire  
-	Ignited gas.
- - Robots  
-	Autonomous machines,made to be slaves of humans.
-
-
-## ℹ️ Description
- - the goal of this project
- - Who can be interested by this  project
- - what benefit from using it
- - how it work
+## ℹ️ Installation 
+1. extract all files into "/boot/grub/themes/decency/"
+2.  edit the file "/etc/default/grub" and change/add following lines
+	 - GRUB_GFXMODE=1920x1080
+	 - GRUB_THEME="/boot/grub/themes/descent/theme.txt"
+3. run "update-grub" with root-previlegs (on Ubuntusystems use "sudo update-grub")
+4. reboot
+5. look at your new awesome Bootmenu
 
 
 ## 📝 Note
- - The software block and freeze when all keys are pressed at same time.  
-	Do Not press all the keyboard keys at same time.
- - If the computer shutdown while using this Software  
-	All the unsaved data will be lost.
- - Do not use a hammer for trying to fix any bugs  
-	It leads to software destruction and may damage your device.
-
-
-## 👉 References:
- - [maxtof photo bank](http://www.maxtof.com)  
-	Website full of interesting photos and text files for related textures images.
- - Cycles and Quasi-Cycles Glosses   
-	Evaluation of  semi-structured system for fully automatics. J. Muresan. Informatics Association 2001, pp. 324–328.
- - [WW2 database](http://www.ww2-ontopia.net)  
-	Pictures and video of the real vehicles.
-
-## 👀 See also:
- - [Supermax editor](http://www.fenix-sw.com/sm-ed.html)  
-	This software is efficient for editing the files of this project..
- - [countries-db](http://www.countries.com/db)  
-	Unicode countries database related to the countries flags.
- - [pc-lock](http://www.secu.com)  
-	An optional device for improving the security with this software.
+ - It works properly with a resolution of 1920x1080.
+ - Be sure that your graphics-Resolution is able to use it  by running the command "vbeinfo" at grub-shell.
+ -  The font used is "Unifont" a free unicode font. 
 
 
 ## 📜 History
  - Origin:
-	- The projet was initiate by [Mark Borello](mailto:mbo@msn.com) for [Frikaia.com](https://www.frikaia.com) but the main creators and author is [Nizi Maza](https://github.com/nizi) .
-
+	- first modifications made by N-z0 in december 2015 .
+	
  - Development:
-	- In 2010  [Damien ford](mailto:damfo@gmail.com) continued the project with the help of [Tim Devens](https://github.com/timdev)  for the management.
-	- The project moved on [Gitswitch](https://gitswitch.com) last summer
-	- And now  [Microhard](https://www.microhard.com) is the official publisher
+	- last edit on march 2021 by N-z0
 
 
 ## ❤️ Special thanks
- - [Wikipedia](https://www.wikipedia.org)  
-	Gave us so much knowledge...
- - The R.S.A.  
-	For providing infrastructure material and active solidarity.
- - Janice Bastos  
-	So much grateful for all the love given.
+This theme is based on "Descent" theme published for download on internet.
 
